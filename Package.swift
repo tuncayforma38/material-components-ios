@@ -17,16 +17,9 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "MaterialComponents",
-            path: "components",
-            exclude: [
-                "README.md",
-                "docs",
-                "examples",
-                "scripts"
-            ],
-            sources: ["**/*.h", "**/*.m", "**/*.swift"],
+            name: "MaterialCollections",
+            path: "components/Collections",
             publicHeadersPath: "."
-        )
+        ),
     ]
 )
