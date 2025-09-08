@@ -7,12 +7,23 @@ let package = Package(
         .iOS(.v11)
     ],
     products: [
-        .library(name: "MaterialComponents", targets: ["MaterialComponents"])
+        .library(
+            name: "MaterialComponents",
+            targets: ["MaterialComponents"]
+        )
     ],
     targets: [
         .target(
             name: "MaterialComponents",
-            path: "components"
+            path: "components", // components klasörü içindeki tüm alt klasörleri hedefler
+            exclude: [
+                "README.md",
+                "docs",
+                "examples",
+                "scripts"
+            ],
+            sources: ["**/*.h", "**/*.m", "**/*.swift"],
+            publicHeadersPath: "."
         )
     ]
 )
