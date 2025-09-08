@@ -20,7 +20,7 @@ let package = Package(
     targets: [
         .target(
             name: "MaterialCollections",
-            path: "components/Collections",
+            path: "components/Collections/src",
             exclude: [
                 "README.md",
                 "docs",
