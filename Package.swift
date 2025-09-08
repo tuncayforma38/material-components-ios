@@ -13,7 +13,7 @@ let package = Package(
     products: [
         .library(
             name: "MaterialComponents",
-            targets: ["MaterialComponents"]
+            targets: ["MaterialCollections"]
         )
 
     ],
