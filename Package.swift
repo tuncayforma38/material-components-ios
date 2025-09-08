@@ -3,6 +3,8 @@
 
 import PackageDescription
 
+
+
 let package = Package(
     name: "MaterialComponents",
     platforms: [
@@ -19,7 +21,14 @@ let package = Package(
         .target(
             name: "MaterialCollections",
             path: "components/Collections",
+            exclude: [
+                "README.md",
+                "docs",
+                "examples",
+                "scripts"
+            ],
+            sources: ["**/*.h", "**/*.m", "**/*.swift"],
             publicHeadersPath: "."
-        ),
+        )
     ]
 )
