@@ -1,9 +1,5 @@
-// swift-tools-version:5.3
-
-
+// swift-tools-version:5.9
 import PackageDescription
-
-
 
 let package = Package(
     name: "MaterialComponents",
@@ -13,22 +9,17 @@ let package = Package(
     products: [
         .library(
             name: "MaterialComponents",
-            targets: ["MaterialCollections"]
-        )
-
+            targets: ["MaterialComponents"]
+        ),
     ],
     targets: [
         .target(
-            name: "MaterialCollections",
-            path: "components/Collections/src",
-            exclude: [
-                "README.md",
-                "docs",
-                "examples",
-                "scripts"
-            ],
-            sources: ["**/*.h", "**/*.m", "**/*.swift"],
-            publicHeadersPath: "."
+            name: "MaterialComponents",
+            path: "components",
+            publicHeadersPath: ".",
+            cSettings: [
+                .headerSearchPath("**")
+            ]
         )
     ]
 )
