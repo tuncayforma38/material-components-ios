@@ -65,14 +65,25 @@ let package = Package(
             dependencies: ["CollectionCells", "PrivateMath"],
             path: "components/Collections/src",
             publicHeadersPath: ".",
-            cSettings: [.headerSearchPath("include")]
+               cSettings: [
+                    .headerSearchPath("."),
+                    .headerSearchPath("../../Collections/src"),      // ekstra klasör
+                    .headerSearchPath("../../AnimationTiming/src"),  // başka modül
+                    .headerSearchPath("../")                          // components altındaki tüm .h dosyaları için
+                ]
+
         ),
         .target(
             name: "CollectionCells",
             dependencies: ["PrivateMath", "Ink", "ShapeLibrary"],
             path: "components/CollectionCells/src",
             publicHeadersPath: ".",
-            cSettings: [.headerSearchPath("include")]
+            cSettings: [
+                    .headerSearchPath("."),
+                    .headerSearchPath("../../Collections/src"),      // ekstra klasör
+                    .headerSearchPath("../../AnimationTiming/src"),  // başka modül
+                    .headerSearchPath("../")                          // components altındaki tüm .h dosyaları için
+                ]
         ),
     ]
 )
