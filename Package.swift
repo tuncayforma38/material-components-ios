@@ -8,7 +8,6 @@ let package = Package(
         .iOS(.v14),
     ],
     products: [
-        .library(name: "TextFields", targets: ["TextFields"]),
         .library(name: "Collections", targets: ["Collections"]),
         .library(name: "CollectionCells", targets: ["CollectionCells"])
     ],
@@ -54,16 +53,7 @@ let package = Package(
         .target(name: "ShadowLayer", dependencies: ["ShadowElevations"], path: "components/ShadowLayer/src", publicHeadersPath: "."),
         .target(name: "ShapeLibrary", dependencies: ["Shapes", "PrivateMath"], path: "components/ShapeLibrary/src", publicHeadersPath: "."),
         .target(name: "Shapes", dependencies: ["ShadowLayer", "PrivateColor", "PrivateMath"], path: "components/Shapes/src", publicHeadersPath: "."),
-        .target(
-            name: "TextFields",
-            dependencies: [
-                "AnimationTiming", "Buttons", "Elevation", "Palettes", "Typography", "PrivateMath",
-                .product(name: "MDFInternationalization", package: "material-internationalization-ios")
-            ],
-            path: "components/TextFields/src",
-            exclude: ["Theming", "ColorThemer"],
-            cSettings: [.headerSearchPath("../../MinimumOS/src"), .headerSearchPath("include")]
-        ),
+        
       
         .target(name: "PrivateApplication", path: "components/private/Application/src", publicHeadersPath: "."),
         .target(name: "PrivateColor", path: "components/private/Color/src", publicHeadersPath: ".", cSettings: [.headerSearchPath("../../../Availability/src")]),
