@@ -7,19 +7,65 @@ let package = Package(
         .iOS(.v11)
     ],
     products: [
-        .library(
-            name: "MaterialComponents",
-            targets: ["MaterialComponents"]
-        ),
+        .library(name: "MaterialComponentsActivityIndicator", targets: ["MaterialComponentsActivityIndicator"]),
+        .library(name: "MaterialComponentsAppBar", targets: ["MaterialComponentsAppBar"]),
+        .library(name: "MaterialComponentsBottomAppBar", targets: ["MaterialComponentsBottomAppBar"]),
+        .library(name: "MaterialComponentsBottomNavigation", targets: ["MaterialComponentsBottomNavigation"]),
+        .library(name: "MaterialComponentsBottomSheet", targets: ["MaterialComponentsBottomSheet"]),
+        .library(name: "MaterialComponentsButtons", targets: ["MaterialComponentsButtons"]),
+        .library(name: "MaterialComponentsCards", targets: ["MaterialComponentsCards"]),
+        .library(name: "MaterialComponentsChips", targets: ["MaterialComponentsChips"]),
+        .library(name: "MaterialComponentsCollections", targets: ["MaterialComponentsCollections"]),
+        .library(name: "MaterialComponentsDialogs", targets: ["MaterialComponentsDialogs"]),
+        .library(name: "MaterialComponentsFlexibleHeader", targets: ["MaterialComponentsFlexibleHeader"]),
+        .library(name: "MaterialComponentsHeaderStackView", targets: ["MaterialComponentsHeaderStackView"]),
+        .library(name: "MaterialComponentsInk", targets: ["MaterialComponentsInk"]),
+        .library(name: "MaterialComponentsLibraryInfo", targets: ["MaterialComponentsLibraryInfo"]),
+        .library(name: "MaterialComponentsNavigationBar", targets: ["MaterialComponentsNavigationBar"]),
+        .library(name: "MaterialComponentsNavigationDrawer", targets: ["MaterialComponentsNavigationDrawer"]),
+        .library(name: "MaterialComponentsOverlayWindow", targets: ["MaterialComponentsOverlayWindow"]),
+        .library(name: "MaterialComponentsPalettes", targets: ["MaterialComponentsPalettes"]),
+        .library(name: "MaterialComponentsProgressView", targets: ["MaterialComponentsProgressView"]),
+        .library(name: "MaterialComponentsShadowElevations", targets: ["MaterialComponentsShadowElevations"]),
+        .library(name: "MaterialComponentsShadowLayer", targets: ["MaterialComponentsShadowLayer"]),
+        .library(name: "MaterialComponentsShapeLibrary", targets: ["MaterialComponentsShapeLibrary"]),
+        .library(name: "MaterialComponentsShapes", targets: ["MaterialComponentsShapes"]),
+        .library(name: "MaterialComponentsSlider", targets: ["MaterialComponentsSlider"]),
+        .library(name: "MaterialComponentsSnackbar", targets: ["MaterialComponentsSnackbar"]),
+        .library(name: "MaterialComponentsTabs", targets: ["MaterialComponentsTabs"]),
+        .library(name: "MaterialComponentsTextFields", targets: ["MaterialComponentsTextFields"]),
+        .library(name: "MaterialComponentsThemes", targets: ["MaterialComponentsThemes"]),
+        .library(name: "MaterialComponentsTypography", targets: ["MaterialComponentsTypography"])
     ],
     targets: [
-        .target(
-            name: "MaterialComponents",
-            path: "components",
-            publicHeadersPath: ".",
-            cSettings: [
-                .headerSearchPath("**")
-            ]
-        )
+        .target(name: "MaterialComponentsActivityIndicator", path: "components/ActivityIndicator", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsAppBar", path: "components/AppBar", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsBottomAppBar", path: "components/BottomAppBar", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsBottomNavigation", path: "components/BottomNavigation", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsBottomSheet", path: "components/BottomSheet", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsButtons", path: "components/Buttons", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsCards", path: "components/Cards", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsChips", path: "components/Chips", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsCollections", path: "components/Collections", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsDialogs", path: "components/Dialogs", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsFlexibleHeader", path: "components/FlexibleHeader", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsHeaderStackView", path: "components/HeaderStackView", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsInk", path: "components/Ink", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsLibraryInfo", path: "components/LibraryInfo", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsNavigationBar", path: "components/NavigationBar", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsNavigationDrawer", path: "components/NavigationDrawer", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsOverlayWindow", path: "components/OverlayWindow", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsPalettes", path: "components/Palettes", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsProgressView", path: "components/ProgressView", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsShadowElevations", path: "components/ShadowElevations", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsShadowLayer", path: "components/ShadowLayer", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsShapeLibrary", path: "components/ShapeLibrary", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsShapes", path: "components/Shapes", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsSlider", path: "components/Slider", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsSnackbar", path: "components/Snackbar", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsTabs", path: "components/Tabs", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsTextFields", path: "components/TextFields", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsThemes", path: "components/Themes", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")]),
+        .target(name: "MaterialComponentsTypography", path: "components/Typography", publicHeadersPath: "src", cSettings: [.headerSearchPath("src")])
     ]
 )
