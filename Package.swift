@@ -12,10 +12,6 @@ let package = Package(
         .library(name: "Collections", targets: ["Collections"]),
         .library(name: "CollectionCells", targets: ["CollectionCells"])
     ],
-    dependencies: [
-        .package(url: "https://github.com/volvogroup-mobility/material-text-accessibility-ios", from: "2.0.1+volvo1"),
-        .package(url: "https://github.com/volvogroup-mobility/material-internationalization-ios", from: "3.0.0+volvo1")
-    ],
     targets: [
         .target(
             name: "AnimationTiming",
@@ -23,18 +19,7 @@ let package = Package(
             publicHeadersPath: ".",
             cSettings: [.headerSearchPath("../../MinimumOS/src")]
         ),
-        .target(
-            name: "Buttons",
-            dependencies: [
-                .product(name: "MDFInternationalization", package: "material-internationalization-ios"),
-                .product(name: "MDFTextAccessibility", package: "material-text-accessibility-ios"),
-                "Elevation", "Ink", "Ripple", "Shadow", "ShadowElevations", "ShadowLayer",
-                "ShapeLibrary", "Shapes", "Typography", "PrivateMath"
-            ],
-            path: "components/Buttons/src",
-            exclude: ["ButtonThemer", "ColorThemer", "PerformantShadowMigration", "ShapeThemer", "Theming", "TypographyThemer"],
-            cSettings: [.headerSearchPath("include")]
-        ),
+        
         .target(name: "Color", path: "components/Color/src", publicHeadersPath: "."),
         .target(
             name: "Elevation",
@@ -79,15 +64,7 @@ let package = Package(
             exclude: ["Theming", "ColorThemer"],
             cSettings: [.headerSearchPath("../../MinimumOS/src"), .headerSearchPath("include")]
         ),
-        .target(
-            name: "Typography",
-            dependencies: [.product(name: "MDFTextAccessibility", package: "material-text-accessibility-ios"), "PrivateApplication", "PrivateMath"],
-            path: "components/Typography/src",
-            exclude: ["FontLoader", "FontScaler"],
-            publicHeadersPath: ".",
-            cSettings: [.headerSearchPath("private")]
-        ),
-        // Private
+      
         .target(name: "PrivateApplication", path: "components/private/Application/src", publicHeadersPath: "."),
         .target(name: "PrivateColor", path: "components/private/Color/src", publicHeadersPath: ".", cSettings: [.headerSearchPath("../../../Availability/src")]),
         .target(name: "PrivateMath", path: "components/private/Math/src", publicHeadersPath: "."),
