@@ -62,14 +62,14 @@ let package = Package(
         // Collections
         .target(
             name: "Collections",
-            dependencies: ["CollectionCells", "PrivateMath", "MaterialComponents"],
+            dependencies: ["CollectionCells", "PrivateMath"],
             path: "components/Collections/src",
             publicHeadersPath: ".",
             cSettings: [.headerSearchPath("include")]
         ),
         .target(
             name: "CollectionCells",
-            dependencies: ["PrivateMath", "Ink", "ShapeLibrary", "MaterialComponents"],
+            dependencies: ["PrivateMath", "Ink", "ShapeLibrary"],
             path: "components/CollectionCells/src",
             publicHeadersPath: ".",
             cSettings: [.headerSearchPath("include")]
