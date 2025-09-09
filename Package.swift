@@ -67,8 +67,7 @@ let package = Package(
             publicHeadersPath: ".",
                cSettings: [
                     .headerSearchPath("."),
-                    .headerSearchPath("../../Collections/src"),      // ekstra klasör
-                    .headerSearchPath("../../AnimationTiming/src"),  // başka modül
+                    .headerSearchPath("../../CollectionCells/src"),      // ekstra klasör                   
                     .headerSearchPath("../")                          // components altındaki tüm .h dosyaları için
                 ]
 
@@ -81,7 +80,7 @@ let package = Package(
             cSettings: [
                     .headerSearchPath("."),
                     .headerSearchPath("../../Collections/src"),      // ekstra klasör
-                    .headerSearchPath("../../AnimationTiming/src"),  // başka modül
+                    .headerSearchPath("../../MaterialRipple/src"),  // başka modül
                     .headerSearchPath("../")                          // components altındaki tüm .h dosyaları için
                 ]
         ),
